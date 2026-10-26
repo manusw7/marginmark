@@ -47,4 +47,3 @@ Riferimento pubblico verificato il 26 ottobre 2026. Nessun accesso diretto all‚Ä
 - Fedelt√† visiva di palette, pannelli e interazioni.
 - Ripristino su tutte le pagine originali, soprattutto dopo modifiche del sito.
 - Caratteristiche di eventuali PDF, documenti autenticati e trascrizioni non presenti nei dati forniti.
-
