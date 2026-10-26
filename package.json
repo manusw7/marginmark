@@ -1,0 +1,26 @@
+{
+  "name": "marginmark",
+  "version": "0.2.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "python3 -m unittest discover -s tests -v && node --test tests/*.test.cjs",
+    "lint": "web-ext lint --source-dir extension --ignore-files 'vendor/**'",
+    "test:firefox": "npm run build && node tests/firefox.mjs"
+  },
+  "dependencies": {
+    "pdfjs-dist": "5.4.296",
+    "pdf-lib": "1.17.1"
+  },
+  "devDependencies": {
+    "web-ext": "8.9.0",
+    "selenium-webdriver": "4.38.0"
+  },
+  "description": "Highlight the web. Keep your notes local.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manusw7/marginmark.git"
+  }
+}

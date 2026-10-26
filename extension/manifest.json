@@ -1,0 +1,67 @@
+{
+  "manifest_version": 2,
+  "name": "Marginmark",
+  "version": "0.2.1",
+  "description": "Highlight web pages and PDFs. Keep your notes in local Markdown files, ready for Obsidian. No account or cloud.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "marginmark@local",
+      "strict_min_version": "128.0"
+    }
+  },
+  "permissions": [
+    "nativeMessaging",
+    "clipboardWrite",
+    "storage",
+    "tabs",
+    "contextMenus",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "browser_action": {
+    "default_title": "Marginmark",
+    "default_popup": "popup.html",
+    "default_icon": "icon.svg"
+  },
+  "sidebar_action": {
+    "default_title": "Marginmark",
+    "default_panel": "sidebar.html",
+    "default_icon": "icon.svg"
+  },
+  "icons": {
+    "48": "icon.svg",
+    "96": "icon.svg"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "file:///*"
+      ],
+      "js": [
+        "anchors.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "highlight": {
+      "suggested_key": {
+        "default": "Alt+S"
+      },
+      "description": "Evidenzia la selezione"
+    },
+    "_execute_sidebar_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+H"
+      }
+    }
+  },
+  "content_security_policy": "script-src 'self'; object-src 'none'; worker-src 'self'; connect-src 'self' http: https:; img-src 'self' data: blob: http: https:"
+}

@@ -1,0 +1,16 @@
+node_modules/
+__pycache__/
+*.pyc
+host/config.json
+extension/vendor/
+dist/
+.test-artifacts/
+
+.env
+.env.*
+*.pem
+*.key
+Highlights/
+PDF/
+.local-highlights/
+webhighlights-backup*.json
